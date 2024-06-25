@@ -1,21 +1,12 @@
-.App {
-  text-align: center;
+html{
+  margin: 0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  margin-top: 0;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +15,110 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.Dashboard {
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ChartContainer {
+  margin: 20px;
+}
+.TopBar{
+  width: 100%;
+  background-color: rgb(172, 82, 82);
+  height: 100px;
+  margin-top: -20px;
+  text-align: center;
+}
+.TopBar > h1{
+  padding-top: 20px;
+}
+.Main-Container{
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+}
+.SideBar{
+  background-color: blueviolet;
+  width: 20%;
+  /* height: 200px; */
+}
+.SideBar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.SideBar a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Links on mouse-over */
+.SideBar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+.MainBar{
+  width: 80%;
+  background-color: antiquewhite;
+}
+.Dashboard{
+  width: 100%;
+  display: flex;
+  box-sizing: border-box;
+}
+.Filters{
+  width: 40%;
+  background-color: #04AA6D;
+
+  /* text-align: center; */
+}
+.Filters > label{
+  /* text-align: center; */
+  font-size: medium;
+  font-weight: 600;
+}
+.Filters > label > input{
+  /* text-align: center; */
+  width: 100%;
+  box-sizing: border-box;
+
+}
+.ChartContainer{
+  width: 100%;
+  background-color: aqua;
+}
+.bar1{
+  max-width: 1000px;
+}
+BarChart{
+  width: 1000px;
+}
+.MainBar{
+  width: 100vw;
+  background-color: chartreuse;
+}
+.MainBar > .bar1{
+  padding-top: 30px;
+  box-sizing: border-box;
+  margin: 20px;
+  width: 100vw;
+  /* background-color: #b95aa1; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  background-color: antiquewhite;
+  /* position: relative; */
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.MainBar > .bar1 > h4{
+  margin-top: -22px;
+  padding: 0px;
+  position: absolute;
+  left: 50%;
+  /* text-align: center; */
+
 }

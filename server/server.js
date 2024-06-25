@@ -1,24 +1,7 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const dataInsightsRouter = require('./routes/dataInsights');
+// server.js
 
-const app = express();
-const port = 5000;
+const app = require('./app'); // Adjust the path as necessary
 
-app.use(cors());
-app.use(bodyParser.json());
+const PORT = process.env.PORT || 5000;
 
-// Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/VisualizationDashboardDB', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
-
-// Use routes
-app.use('/api/data-insights', dataInsightsRouter);
-
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
-});
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
