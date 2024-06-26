@@ -1,7 +1,7 @@
-html{
+html {
   margin: 0;
 }
-body{
+body {
   margin-top: 0;
 }
 .App-header {
@@ -22,31 +22,59 @@ body{
 .ChartContainer {
   margin: 20px;
 }
-.TopBar{
+.TopBar {
   width: 100%;
-  background-color: rgb(172, 82, 82);
-  height: 100px;
+  background-color: rgb(245, 245, 245);
+  height: 80px;
   margin-top: -20px;
   text-align: center;
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  margin-bottom: 100px;
 }
-.TopBar > h1{
-  padding-top: 20px;
+.TopBar > h1 {
+  padding-top: 10px;
+  text-align: left;
+  margin-right: auto;
+  margin-left: auto;
 }
-.Main-Container{
+.Search {
+  text-align: right;
+}
+.Search > input {
+  height: 40px;
+  margin-top: 30px;
+  border-radius: 50px;
+  border: none;
+  padding-left: 10px;
+}
+.Search > button {
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+.Search button:hover:not(.active) {
+  background-color: #8c7070;
+  color: white;
+}
+.Main-Container {
   display: flex;
   box-sizing: border-box;
   width: 100%;
 }
-.SideBar{
-  background-color: blueviolet;
-  width: 20%;
-  /* height: 200px; */
+.SideBar {
+  background-color: rgb(245, 245, 245);
+  width: 15%;
+  margin-top: 70px;
+
 }
 .SideBar a {
   display: block;
   color: black;
   padding: 16px;
   text-decoration: none;
+  text-align: center;
 }
 
 /* Active/current link */
@@ -60,65 +88,195 @@ body{
   background-color: #555;
   color: white;
 }
-.MainBar{
+.MainBar {
   width: 80%;
-  background-color: antiquewhite;
+  background-color: rgb(255, 255, 255);
+  margin-top: 50px;
+
 }
-.Dashboard{
+.Dashboard {
   width: 100%;
   display: flex;
   box-sizing: border-box;
 }
-.Filters{
+.Filters {
   width: 40%;
   background-color: #04AA6D;
-
-  /* text-align: center; */
 }
-.Filters > label{
-  /* text-align: center; */
+.Filters > label {
   font-size: medium;
   font-weight: 600;
 }
-.Filters > label > input{
-  /* text-align: center; */
+.Filters > label > input {
   width: 100%;
   box-sizing: border-box;
-
 }
-.ChartContainer{
+.ChartContainer {
   width: 100%;
-  background-color: aqua;
+  background-color: antiquewhite;
 }
-.bar1{
+.bar1 {
   max-width: 1000px;
 }
-BarChart{
+BarChart {
   width: 1000px;
 }
-.MainBar{
-  width: 100vw;
-  background-color: chartreuse;
+.MainBar {
+  max-width: 100vw;
 }
-.MainBar > .bar1{
+.MainBar > .bar1 {
   padding-top: 30px;
   box-sizing: border-box;
   margin: 20px;
-  width: 100vw;
-  /* background-color: #b95aa1; */
+  width: 80vw;
   overflow-x: auto;
   overflow-y: hidden;
   scrollbar-width: thin;
   background-color: antiquewhite;
-  /* position: relative; */
-
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
-.MainBar > .bar1 > h4{
+.MainBar > .bar1 > h4 {
   margin-top: -22px;
   padding: 0px;
   position: absolute;
   left: 50%;
-  /* text-align: center; */
+}
+.MainBar > .Line {
+  padding-top: 30px;
+  box-sizing: border-box;
+  margin: 20px;
+  width: 80vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  /* width: fit-content; */
+  /* height: fit-content; */
+}
+.MainBar > .Line > h4 {
+  margin-top: -22px;
+  padding: 0px;
+  /* position: absolute; */
+  left: 50%;
+  text-align: center;
+}
+.MainBar > .PieChart {
+  padding-top: 30px;
+  box-sizing: border-box;
+  margin: 20px;
+  width: 80vw;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: thin;
+  background-color: antiquewhite;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.MainBar > .PieChart > h4 {
+  margin-top: -22px;
+  padding: 0px;
+  /* position: absolute; */
+  left: 50%;
+}
+.FilterBar > input {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  margin: 2px 2px;
+  border-radius: 5px;
+  border: none;
+  background-color: antiquewhite;
+}
+/* App.css */
+.MainBar {
+  display: flex;
+  flex-direction: column;
+}
 
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  /* width: 300px; */
+}
+
+.Switch {
+  height: 40px;
+  margin-top: 30px;
+  margin-left: 5px;
+  border-radius: 50px;
+  border: dashed;
+  border-width: 1px;
+  margin-right: 5px;
+}
+.Switch:hover:not(.active) {
+  background-color: #c2f8ca;
+  color: rgb(0, 0, 0);
+}
+
+@media (max-width: 1200px) {
+  .grid-layout {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .Main-Container {
+    flex-direction: column;
+  }
+  
+  .SideBar {
+    width: 100%;
+  }
+
+  .MainBar {
+    width: 100%;
+  }
+
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .TopBar > h1 {
+    font-size: 18px;
+  }
+
+  .Search > input {
+    width: 60%;
+  }
+}
+
+@media (max-width: 480px) {
+  .TopBar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .TopBar > h1 {
+    padding-top: 10px;
+    margin: 10px 0;
+  }
+
+  .Search > input {
+    width: 80%;
+    height: 30px;
+  }
+
+  .Search > button {
+    height: 25px;
+    margin-top: 10px;
+  }
+
+  .SideBar a {
+    padding: 12px;
+  }
+
+  .FilterBar > input {
+    height: 25px;
+  }
+
+  .Switch {
+    height: 30px;
+    margin-top: 20px;
+  }
 }
