@@ -10,7 +10,7 @@ import PieChartComponent from './components/Charts/PieChartComponent';
 import ScatterChartComponent from './components/Charts/ScatterChartComponent';
 
 function App() {
-  const [filteredData, setFilteredData] = useState(jsondata);
+  const [filteredData, setFilteredData] = useState([jsondata]);
   const [gridLayout, setGridLayout] = useState(false);
 
   const [endYear, setEndYear] = useState('');
